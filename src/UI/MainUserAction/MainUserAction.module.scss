@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftButtons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.leftButtons span{
+    width: 1px;
+    height: 18px;
+    background-color: #CDCDCD;
+}
+
+.btn{
+    color: #616F82;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.activeBtn{
+    color: #4198C5;
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+}

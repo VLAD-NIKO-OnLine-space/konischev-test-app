@@ -1,0 +1,53 @@
+@import '../../assets/parametrs.scss';
+
+.frame{
+    width: 744px;
+    height: 110px;
+    padding: 15px;
+    background-color: $fonColor;
+    box-shadow: 0px 1px 4px 0px rgba(30, 30, 30, 0.10);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.userIcon{
+    width: 90px;
+    height: 90px;
+    margin-right: 14px;
+    border-radius: 50%;
+}
+
+.main{
+    display: flex;
+}
+
+.infoUser{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.name{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.info{
+    font-size: 12px;
+}
+
+.shape{
+    position: absolute;
+    top: 28px;
+    right: 23px;
+    opacity: 0.5;
+    transition: 0.2s all linear;
+    cursor: pointer;
+}
+
+.shape:hover{
+    opacity: 1;
+}
