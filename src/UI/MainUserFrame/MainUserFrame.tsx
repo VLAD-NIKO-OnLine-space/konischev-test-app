@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './MainUserFrame.module.scss'
 import UserActive from '../../store/UserActive';
 import { observer } from 'mobx-react';
 
-
-interface MainUserFrameProps {
-    
-}
-
-const MainUserFrame: React.FC<MainUserFrameProps> = observer(() => {
+const MainUserFrame: React.FC = observer(() => {
+    const [visible, setVisible] = useState<boolean>(false)
+    const rootStyleModal = [styles.modal]
+    if(visible){
+        rootStyleModal.push(styles.modalAcrive)
+    }
     return (
         <div className={styles.frame}>
             <div className={styles.main}> 
@@ -18,9 +18,12 @@ const MainUserFrame: React.FC<MainUserFrameProps> = observer(() => {
                     <p className={styles.info}>{UserActive.userInfo}</p>
                 </div>
             </div>
-            <img src="./icons/Shape.svg" alt="icon" className={styles.shape}/>
+            <img src="./icons/Shape.svg" alt="icon" className={visible ? styles.shapeActive : styles.shape} onClick={()=>setVisible(!visible)}/>
+            <div className={rootStyleModal.join(' ')}>
+                <button className={styles.actionButton}>Изменить</button>
+                <button className={styles.actionButton}>Удалить</button>
+            </div>
         </div>
     );
 });
-
 export default MainUserFrame;

@@ -4,11 +4,8 @@ import MainUserAction from '../../UI/MainUserAction/MainUserAction';
 import styles from './RigthBar.module.scss'
 import NewsBar from '../NewsBar/NewsBar';
 
-interface RigthBarProps {
-    
-}
 
-const RigthBar: React.FC<RigthBarProps> = () => {
+const RigthBar: React.FC = () => {
     return (
         <div className={styles.main}>
             <MainUserFrame/>

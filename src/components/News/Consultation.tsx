@@ -1,8 +1,6 @@
 import React from 'react';
 import ConsultationChar from './ConsultationChar/ConsultationChar';
 
-
-
 const date = [
     {id: 1, title: 'Online консультация', date: '15.01.2019, 12:30-13:00', status: '', img: './icons/c1.svg'},
     {id: 2, title: 'Online консультация', date: '15.01.2019, 12:30-13:00', status: '', img: './icons/c2.svg'},

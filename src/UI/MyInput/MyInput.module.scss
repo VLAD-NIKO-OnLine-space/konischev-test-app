@@ -20,11 +20,31 @@
     padding-left: 35px;
 }
 
+.input:focus{
+    border: 2px solid #f1f2f3;
+    border-radius: 25px;
+    width: 250px;
+    
+}
+
 .iconSearch{
     position: absolute;
-    top: 22px;
+    top: 14px;
     left: 19px;
-    width: 16px;
-    height: 16px;
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
+.s1{
+    position: absolute;
+    top: 14px;
+    right: 19px;
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
 }

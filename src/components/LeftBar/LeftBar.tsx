@@ -12,13 +12,13 @@ interface LeftBarProps {
 
 const LeftBar: React.FC<LeftBarProps> = ({ users }) => {
     const [value, setValue] = useState<string>('')
-
     return (
         <div className={styles.main}>
             <MyInput 
                 value={value}
                 onChange={event => setValue(event.target.value)}
                 placeholder='Поиск...'
+                setValue={setValue}
             />
             <FrameAction/>
             <UserList users={users}/>
