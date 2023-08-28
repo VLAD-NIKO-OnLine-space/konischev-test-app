@@ -1,0 +1,40 @@
+.main{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    transform: scale(0);
+}
+.mainActive{
+    transform: scale(100%);
+}
+
+.content{
+    background-color: rgb(44, 201, 54);
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s all ease-in-out;
+}
+
+.contentActive{
+    transform: scale(100%);
+    opacity: 1;
+}
+
+.closeBtn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    z-index: 55;
+    cursor: pointer;
+}

@@ -7,4 +7,14 @@
     box-shadow: 0px 2px 10px 0px rgba(22, 23, 24, 0.08);
     background-color: #fff;
     z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    max-width: 1100px;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
 }

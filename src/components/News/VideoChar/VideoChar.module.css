@@ -1,0 +1,37 @@
+.main{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    max-width: 724px;
+    height: 66px;
+    border-radius: 4px;
+    border: 2px solid #f1f2f3;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+.main:hover{
+    background-color: bisque;
+}
+
+.img{
+    margin-right: 10px;
+}
+
+.info{
+
+}
+
+.title{
+    color: #161718;
+}
+
+.bottom{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.avtor{
+    color: #616F82;
+}

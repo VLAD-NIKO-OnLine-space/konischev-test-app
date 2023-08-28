@@ -1,17 +1,35 @@
 import React, { useState, MouseEventHandler } from 'react';
 import styles from './MainUserAction.module.scss'
+import { observer } from 'mobx-react';
+import NewsSelect from '../../store/NewsSelect';
+import Modal from '../Modal/Modal';
+
 
 interface MainUserActionProps {
     
 }
 
-const MainUserAction: React.FC<MainUserActionProps> = () => {
+const MainUserAction: React.FC<MainUserActionProps> = observer(() => {
 
     const [click, setClick] = useState<string>('1')
+    const [visible, setVisible] = useState<boolean>(false)
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         const button: HTMLButtonElement = event.currentTarget;
         setClick(button.name);
+        NewsSelect.addSelectNews(button.name)
+    }
+
+
+    let text:string = 'Новая заметка'
+
+    switch(NewsSelect.selectNew){
+
+        case '1': text='Новая заметка'; break;
+        case '2': text = 'Записать'; break;
+        case '3': text = 'Рекомендовать'; break;
+        case '4': text = 'Рекомендовать'; break;
+
     }
     
     return (
@@ -26,12 +44,15 @@ const MainUserAction: React.FC<MainUserActionProps> = () => {
                 <button className={click==='4' ? styles.activeBtn : styles.btn} name='4' onClick={handleClick}>Мероприятия</button>
             </div>
 
-            <div>
-                <button className={styles.btn}>Новая заметка</button>
-                <img src="" alt="" />
+            <div className={styles.rigthWrapper}>
+                <button className={styles.btn}>{text}</button>
+                <img src="./icons/addButton.png" alt="add" className={styles.addBtn} onClick={()=>setVisible(true)}/>
             </div>
+            <Modal visible={visible} setVisible={setVisible}>
+                Модальное окно в разработке))
+            </Modal>
         </div>
     );
-};
+});
 
 export default MainUserAction;

@@ -10,7 +10,7 @@ interface UserListProps {
 const UserList: React.FC<UserListProps> = ({ users }) => {
     return (
         <div className={styles.wrapper}>
-            {users.map(e => <UserFrame name={e.name} surName={e.surName} avatar={e.avatar} key={e.id} id={e.id}/>)}
+            {users.map(e => <UserFrame name={e.name} surName={e.surName} avatar={e.avatar} key={e.id} id={e.id} info={e.info}/>)}
         </div>
     );
 };

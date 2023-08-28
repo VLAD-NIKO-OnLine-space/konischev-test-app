@@ -1,0 +1,41 @@
+.main{
+    padding: 20px;
+    border-radius: 4px;
+    border: 2px solid #f1f2f3;
+    display: flex;
+    color:#161718;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; 
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s all linear;
+}
+.main:hover{
+    background-color: azure;
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+}
+
+.date{
+    font-size: 14px;
+    color: #616F82;
+}
+
+.status{
+    position: absolute;
+    bottom: 7px;
+    right: 11px;
+    color: #F00;
+}
